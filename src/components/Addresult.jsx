@@ -17,11 +17,21 @@ const Addresult = () => {
 
         const readValue = () => {
             console.log(data)
+            axios.post("http://localhost:8080/add", data).then(
+                (response) => {
+                    console.log(response)
+                    if (response.data.status == "success") {
+                        alert("success")
+                    }
+                    else {
+                        alert("ok")
+                    }
+                }
+
+
+            ).catch()
         }
     
-
-
-
   return (
     <div>
 
